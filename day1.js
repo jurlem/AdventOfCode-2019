@@ -106,7 +106,7 @@ function calcFuel (masses) {
   for (let mass of masses) {
     newArr.push (Math.floor (mass / 3 - 2));
   }
-  newArr.reduce ((accu, currVal) => accu + currVal);
-  return newArr;
+  const total = newArr.reduce ((a, b) => a + b);
+  return total;
 }
 calcFuel (input);
