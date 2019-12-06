@@ -10,5 +10,5 @@ This repository has my solutions to the coding challenge
 
 # TypeScript
 
-- To transpile Typeccript to Javascript file:
+- To transpile changed Typeccript to Javascript file:
   `tsc`
