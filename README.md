@@ -10,5 +10,5 @@ This repository has my solutions to the coding challenge
 
 # TypeScript
 
-- To transpile changed Typeccript to Javascript file:
-  `tsc`
+- To change & transpile Typeccript to Javascript file:
+  `tsc -w` and run `nodemon filename.js`in a split terminal

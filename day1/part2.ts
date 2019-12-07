@@ -1,17 +1,19 @@
 const y = require('./data.js');
-let input: any = y.data;
+let input: number[] = y.data;
 
 function calcFuel(masses: number[]) {
   const fuels = [];
-  let fuelPerMass = [];
+  let fuelPerMass: number[] = [];
 
   for (let mass of masses) {
-    fuelPerMass.push(Math.floor(mass / 3 - 2));
+    // fuelPerMass.push (Math.floor (mass / 3 - 2));
+    fuelPerMass = [...fuelPerMass, Math.floor(mass / 3 - 2)];
 
     let last: number = fuelPerMass[fuelPerMass.length - 1];
 
     if (last > 6) {
-      fuelPerMass.push(Math.floor(last / 3 - 2));
+      // fuelPerMass.push(Math.floor(last / 3 - 2));
+      fuelPerMass = [...fuelPerMass, Math.floor(last / 3 - 2)];
     }
 
     const massTotal: number = fuelPerMass.reduce((a, b) => a + b);
@@ -21,5 +23,5 @@ function calcFuel(masses: number[]) {
 
   console.log(fuels.reduce((a, b) => a + b));
 }
-calcFuel(data);
+calcFuel(input);
 //4632998
